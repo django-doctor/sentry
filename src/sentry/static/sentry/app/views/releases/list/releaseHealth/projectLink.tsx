@@ -10,7 +10,7 @@ type Props = {
   project: ReleaseProject;
 };
 
-const ProjectName = ({orgSlug, releaseVersion, project}: Props) => (
+const ProjectLink = ({orgSlug, releaseVersion, project}: Props) => (
   <Button
     size="xsmall"
     to={{
@@ -24,4 +24,4 @@ const ProjectName = ({orgSlug, releaseVersion, project}: Props) => (
   </Button>
 );
 
-export default ProjectName;
+export default ProjectLink;

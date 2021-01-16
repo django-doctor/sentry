@@ -26,7 +26,7 @@ import NotAvailable from '../notAvailable';
 import {DisplayOption} from '../utils';
 
 import Header from './header';
-import ProjectName from './projectName';
+import ProjectLink from './projectLink';
 
 type Props = {
   projects: Array<ReleaseProject>;
@@ -206,7 +206,7 @@ const Content = ({
                   </RightColumn>
 
                   <RightColumn>
-                    <ProjectName
+                    <ProjectLink
                       orgSlug={orgSlug}
                       project={project}
                       releaseVersion={releaseVersion}
