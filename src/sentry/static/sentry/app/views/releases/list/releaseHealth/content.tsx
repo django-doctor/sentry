@@ -74,7 +74,7 @@ const Content = ({
             </React.Fragment>
           )}
           <RightColumn>{t('Crashes')}</RightColumn>
-          <RightColumn>{t('Issues')}</RightColumn>
+          <RightColumn>{t('New Issues')}</RightColumn>
         </Layout>
       </Header>
 
@@ -279,7 +279,7 @@ const Layout = styled('div')`
   }
 
   @media (min-width: ${p => p.theme.breakpoints[3]}) {
-    grid-template-columns: 1fr 1fr 1fr 1fr 0.5fr 0.5fr 0.5fr;
+    grid-template-columns: 1fr 0.8fr 1fr 1fr 0.5fr 0.5fr 0.5fr;
   }
 `;
 
