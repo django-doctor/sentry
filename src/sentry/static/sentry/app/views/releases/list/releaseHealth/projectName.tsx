@@ -1,9 +1,7 @@
 import React from 'react';
-import styled from '@emotion/styled';
 
-import GlobalSelectionLink from 'app/components/globalSelectionLink';
-import ProjectBadge from 'app/components/idBadge/projectBadge';
-import space from 'app/styles/space';
+import Button from 'app/components/button';
+import {t} from 'app/locale';
 import {ReleaseProject} from 'app/types';
 
 type Props = {
@@ -13,7 +11,8 @@ type Props = {
 };
 
 const ProjectName = ({orgSlug, releaseVersion, project}: Props) => (
-  <GlobalSelectionLink
+  <Button
+    size="xsmall"
     to={{
       pathname: `/organizations/${orgSlug}/releases/${encodeURIComponent(
         releaseVersion
@@ -21,14 +20,8 @@ const ProjectName = ({orgSlug, releaseVersion, project}: Props) => (
       query: {project: project.id},
     }}
   >
-    <StyledProjectBadge project={project} avatarSize={16} />
-  </GlobalSelectionLink>
+    {t('View')}
+  </Button>
 );
 
 export default ProjectName;
-
-const StyledProjectBadge = styled(ProjectBadge)`
-  @media (min-width: ${p => p.theme.breakpoints[0]}) {
-    padding-right: ${space(1)};
-  }
-`;
